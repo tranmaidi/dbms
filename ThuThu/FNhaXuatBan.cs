@@ -37,6 +37,15 @@ namespace QuanLyThuVien.ThuThu
             dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
         }
 
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            NhaXuatBan nhaxuatbanmoi = new NhaXuatBan(txtMaNXB.Text, txtTenNXB.Text,
+                txtDiaChi.Text, txtEmail.Text, txtSdt.Text);
+            dao.SuaNhaXuatBan(nhaxuatbanmoi);
+            dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
+        }
+
         private void dtNhaXuatBan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = dtNhaXuatBan.Rows[e.RowIndex];
@@ -45,14 +54,6 @@ namespace QuanLyThuVien.ThuThu
             txtDiaChi.Text = selectedRow.Cells["DiaChi"].Value.ToString();
             txtEmail.Text = selectedRow.Cells["Email"].Value.ToString();
             txtSdt.Text = selectedRow.Cells["Sdt"].Value.ToString();
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            NhaXuatBan nhaxuatbanmoi = new NhaXuatBan(txtMaNXB.Text, txtTenNXB.Text,
-                txtDiaChi.Text, txtEmail.Text, txtSdt.Text);
-            dao.SuaNhaXuatBan(nhaxuatbanmoi);
-            dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
         }
     }
 }
