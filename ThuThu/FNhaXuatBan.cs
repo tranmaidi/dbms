@@ -35,6 +35,11 @@ namespace QuanLyThuVien.ThuThu
                 txtDiaChi.Text, txtEmail.Text, txtSdt.Text);
             dao.XoaNhaXuatBan(nhaxuatbanmoi);
             dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
+            FDauSach fDauSach = Application.OpenForms.OfType<FDauSach>().FirstOrDefault();
+            if (fDauSach != null)
+            {
+                fDauSach.LoadData();
+            }
         }
 
 
@@ -54,6 +59,13 @@ namespace QuanLyThuVien.ThuThu
             txtDiaChi.Text = selectedRow.Cells["DiaChi"].Value.ToString();
             txtEmail.Text = selectedRow.Cells["Email"].Value.ToString();
             txtSdt.Text = selectedRow.Cells["Sdt"].Value.ToString();
+        }
+
+        private void txtsearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string searchText = txtsearch.Text.Trim();
+            DataTable result = dao.TimNhaxuatban(searchText);
+            dtNhaXuatBan.DataSource = result;
         }
     }
 }
