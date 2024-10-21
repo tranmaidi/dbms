@@ -23,7 +23,10 @@ namespace QuanLyThuVien.ThuThu
             InitializeComponent();         
             dtDauSach.DataSource = dao.LoadDauSach(); 
         }
-
+        public void LoadData()
+        {
+            dtDauSach.DataSource = dao.LoadDauSach();
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             DauSach dausachmoi = new DauSach(txtMaDauSach.Text,txtMaTacGia.Text,

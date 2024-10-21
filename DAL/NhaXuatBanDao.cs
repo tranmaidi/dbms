@@ -24,7 +24,6 @@ namespace QuanLyThuVien.DAL
             {
                 SqlCommand cmd = new SqlCommand("proc_ThemNhaXuatBan", DbConnection.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@MaNXB", SqlDbType.VarChar, 10).Value = nhaxuatban.Manxb;
                 cmd.Parameters.Add("@Ten", SqlDbType.NVarChar, 100).Value = nhaxuatban.Ten;
                 cmd.Parameters.Add("@DiaChi", SqlDbType.NVarChar, 255).Value = nhaxuatban.Diachi;
                 cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 100).Value = nhaxuatban.Email;
@@ -106,6 +105,40 @@ namespace QuanLyThuVien.DAL
                     DbConnection.Instance.CloseConnection();
                 }
             }
+        }
+        public DataTable TimNhaxuatban(string ten)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("proc_searchNhaXuatBan", DbConnection.conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Ten", SqlDbType.NVarChar, 100).Value = ten;
+
+                    if (DbConnection.conn.State == ConnectionState.Closed)
+                    {
+                        DbConnection.Instance.OpenConnection();
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable); 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                if (DbConnection.conn.State == ConnectionState.Open)
+                {
+                    DbConnection.Instance.CloseConnection();
+                }
+            }
+            return dataTable;
         }
     }
 

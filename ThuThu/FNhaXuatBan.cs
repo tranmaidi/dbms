@@ -35,6 +35,20 @@ namespace QuanLyThuVien.ThuThu
                 txtDiaChi.Text, txtEmail.Text, txtSdt.Text);
             dao.XoaNhaXuatBan(nhaxuatbanmoi);
             dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
+            FDauSach fDauSach = Application.OpenForms.OfType<FDauSach>().FirstOrDefault();
+            if (fDauSach != null)
+            {
+                fDauSach.LoadData();
+            }
+        }
+
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            NhaXuatBan nhaxuatbanmoi = new NhaXuatBan(txtMaNXB.Text, txtTenNXB.Text,
+                txtDiaChi.Text, txtEmail.Text, txtSdt.Text);
+            dao.SuaNhaXuatBan(nhaxuatbanmoi);
+            dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
         }
 
         private void dtNhaXuatBan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -47,12 +61,11 @@ namespace QuanLyThuVien.ThuThu
             txtSdt.Text = selectedRow.Cells["Sdt"].Value.ToString();
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void txtsearch_KeyUp(object sender, KeyEventArgs e)
         {
-            NhaXuatBan nhaxuatbanmoi = new NhaXuatBan(txtMaNXB.Text, txtTenNXB.Text,
-                txtDiaChi.Text, txtEmail.Text, txtSdt.Text);
-            dao.SuaNhaXuatBan(nhaxuatbanmoi);
-            dtNhaXuatBan.DataSource = dao.LoadNhaXuaBan();
+            string searchText = txtsearch.Text.Trim();
+            DataTable result = dao.TimNhaxuatban(searchText);
+            dtNhaXuatBan.DataSource = result;
         }
     }
 }

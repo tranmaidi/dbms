@@ -20,3 +20,23 @@ F:\LaptrinhWindow\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FCuonSach.resourc
 F:\LaptrinhWindow\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FViTri.resources
 F:\LaptrinhWindow\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FTacGIa.resources
 F:\LaptrinhWindow\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FCuonSachViTri.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.AssemblyReference.cache
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.DAL.FDangNhap.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FCuonSach.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FCuonSachViTri.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FDocGia.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FDauSach.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FManHinhChinh.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FNhaXuatBan.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FTacGIa.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FViTri.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.UCMenu.resources
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb

@@ -18,6 +18,7 @@ namespace QuanLyThuVien.DAL
             string query = "select * from View_DauSach";
             return DbConnection.Instance.Load(query);
         }
+
         public void ThemDauSach(DauSach dausach)
         {
             try
@@ -61,7 +62,7 @@ namespace QuanLyThuVien.DAL
                     DbConnection.Instance.OpenConnection();
                 }
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm đầu sách thành công!");
+                MessageBox.Show("Xóa đầu sách thành công!");
             }
             catch (Exception ex)
             {
